@@ -66,9 +66,12 @@ public class UserController {
 	 * @param id 运行时，spring mvc将从请求的URL中指定部分{id}获取用户提交参数id，并创建与赋值函数参数String id
 	 * @param model 注释见上文
 	 * @return
+	 * @throws Exception 
 	 */
-	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-	public String getUser(@PathVariable("id") String id, ModelMap model){
+	@RequestMapping(value = "/user/{code}", method = RequestMethod.GET) 
+	public String getUser(@PathVariable("code") String code, ModelMap model) throws Exception{
+		byte[] id1 = PasswordHelper.decryptBASE64(code);
+		String id =new String(id1);
 		try{
 			User user = userMapper.getUser(id);
 			

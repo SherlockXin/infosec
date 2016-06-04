@@ -19,6 +19,9 @@
 	    <intercept-url pattern="/users" access="hasRole('ROLE_ADMIN')"  />
 	    <intercept-url pattern="/user/" access="hasRole('ROLE_ADMIN,ROLE_USER')"  /> 
 	    <form-login login-page="/login.jsp" default-target-url="/index.jsp"     always-use-default-target="true" />
+		<session-management >
+		<concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+		</session-management>	
 	</http>
 	
 	<authentication-manager>

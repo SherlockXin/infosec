@@ -133,7 +133,7 @@ a{
 		<P style="padding: 30px 0px 10px; position: relative;">
 			<SPAN class="u_logo"></SPAN>
 		<form name='f' action='j_spring_security_check' method='POST'>   
-			<INPUT class="ipt" type="text" name='j_username' placeholder="请输入用户名" > 
+			<INPUT class="ipt" type="text" name='j_username' placeholder="请输入用户名" value="" > 
 		<P style="position: relative;">
 			<SPAN class="p_logo"></SPAN>         
 			<INPUT class="ipt"  type="password" name='j_password1' id='j_password1' placeholder="请输入密码">
